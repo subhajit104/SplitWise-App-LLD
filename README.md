@@ -1,4 +1,5 @@
 SplitWise-App-LLD
+-----------------
 Create an expense sharing application.
 -------------------------------------
 
