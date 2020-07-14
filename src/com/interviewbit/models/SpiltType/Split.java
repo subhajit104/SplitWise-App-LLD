@@ -19,4 +19,8 @@ public abstract class Split {
     public double getAmount() {
         return amount;
     }
+
+    public User getUser() {
+        return user;
+    }
 }
