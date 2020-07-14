@@ -3,7 +3,7 @@ Create an expense sharing application.
 
 An expense sharing application is where you can add your expenses and split it among different people. The app keeps balances between people as in who owes how much to whom.
 
-Example
+# Example
 
 You live with 3 other friends.
 
@@ -71,9 +71,9 @@ User3 owes User1: 1130 (1130+0)
 
 User3 owes User4: 240 (0+240)
 
-Requirements
+# Requirements
 
-User: Each user should have a userId, name, email, mobile number.
+Each user should have a userId, name, email, mobile number.
 
 Expense: Could either be EQUAL, EXACT or PERCENT
 
@@ -113,7 +113,7 @@ If there are no balances for the input, print No balances
 
 In cases where the user for which balance was asked for, owes money, they’ll be x. They’ll be y otherwise.
 
-Optional Requirements
+# Optional Requirements
 
 - A way to add an expense name while adding the expense. Can also add notes, images, etc.
 
@@ -123,9 +123,10 @@ Optional Requirements
 
 - There can be an option to simplify expenses. When simplify expenses is turned on (is true), the balances should get simplified. Ex: ‘User1 owes 250 to User2 and User2 owes 200 to User3’ should simplify to ‘User1 owes 50 to User2 and 200 to User3’.
 
-There could be different ways to design a solution for this. I’ll mention how I would have approached it during an actual interview.
+# Approach 
+1. There could be different ways to design a solution for this. I’ll mention how I would have approached it during an actual interview.
 
-Let’s dissect the problem statement to determine how to design a good solution for it.
+1. Let’s dissect the problem statement to determine how to design a good solution for it.
 
 The gist of the problem statement is that we need to create an expense sharing application. The application will have multiple users, an option to add expenses (EQUAL, EXACT or PERCENT) and an option to show balances (All or a specific user).
 
@@ -140,9 +141,11 @@ For optional requirement #4, I’ll have to take extra care of not messing up th
 So, I can keep my code extensible for 3 of the 4 optional requirements!
 
 Then, I’ll note down the entities (models) that will be involved in the design.
-
-User
-Split (EqualSplit, ExactSplit, PercentSplit)
+# Actors
+1. User: users can add any amount, select any type of expense and split with any of the available users.
+1. Split: (EqualSplit, ExactSplit, PercentSplit)
+1. Expense : piadBy, amount, TypeOfExpense
+1. 
 ExpenseMetadata (For Optional requirement #1)
 Expense (EqualExpense, ExactExpense, PercentExpense)
 ExpenseType (enum to differentiate between different expense types)
